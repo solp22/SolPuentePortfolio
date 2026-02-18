@@ -1,0 +1,185 @@
+
+  .hero-image {
+    position: relative;
+    width: 100%;
+  }
+
+  .hero-image img {
+    width: 100%;
+    display: block;
+  }
+
+  .hero{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hero-image h1 {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 100%;
+    text-align: center;
+    font-weight: 400;
+  }
+
+  .tabs-wrapper {
+    position: relative;
+    display: inline-block;
+    margin: 1em;
+  }
+
+  /* TRIANGULO */
+  .tabs-wrapper::before, .tabs::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #1f1f1f;
+  }
+
+  .tabs {
+    position: relative;
+    display: inline-flex;
+    background-color: #1f1f1f;
+    overflow: hidden;
+  }
+
+  .tabs p {
+    text-decoration: none;
+    color: #ffffff;
+    font-family: sans-serif;
+    border-right: 1px solid #444;
+    transition: 0.3s ease;
+  }
+
+  .tabs p:last-child {
+    border-right: none;
+  }
+
+  .tabs p:hover {
+    background-color: #3a3a3a;
+    color: white;
+    cursor: pointer;
+  }
+
+  #texto{
+    font-size: 1.1em;
+    text-align: justify;
+  }
+
+  #video {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mobile-only {
+  display: none;
+  width: 100%;
+}
+
+
+/* ---- CELU ----- */
+@media (max-width: 767px) {
+  .hero {
+    padding: 1.5em 0.5em;
+    padding-bottom: 1.5em;
+  }
+
+  .hero-image h1 {
+    font-size: 2.2em;
+  }
+
+  .tabs {
+    border-radius: 6px;
+  }
+
+  .tabs p {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+
+  #texto p {
+    padding: 0.5em 1.5em;
+  }
+
+    #video {
+    margin-top: 5em;
+ 
+  }
+
+  video {
+    width: 100%;
+    height: 100%;
+  }
+
+   .mobile-only {
+    display: block;
+}
+}
+
+
+
+
+
+
+
+
+
+
+/* ------ DESKTOP ------ */
+@media (min-width: 768px) {
+  .hero {
+    width: 55%;
+    padding: 3em;
+    padding-bottom: 1.5em;
+  }
+
+  .hero-image h1 { 
+    font-size: 3.3em;
+  }
+
+  .tabs {
+    border-radius: 8px;
+  }
+
+  .tabs p {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  #texto {
+    width: 48%;
+    padding-left: 3em;
+    font-size: 1.2em;
+    text-align: justify;
+    position: relative;
+  }
+
+  #texto p{
+    padding: 0.7em 0em;
+  }
+
+  #video {
+    height: 100vh;
+    padding: 6em;
+  }
+
+  video {
+    width: 80%;
+    height: 100%;
+  }
+
+  #background {
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    height: 100vh;
+  }
+}

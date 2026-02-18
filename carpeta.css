@@ -1,0 +1,138 @@
+/* Creditos del código a el usuario Cobp (Fabio Cobb) en uiverse.io.
+Se utilizó Inteligencia Artificial Generativa para transformar el código de Tailwind CSS a CSS normal.
+*/
+
+
+
+/* CONTENEDOR */
+.folder-section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+/* ARCHIVO BASE */
+.file {
+  position: relative;
+  width: 240px;
+  height: 160px;
+  cursor: pointer;
+  perspective: 1500px;
+  transform-origin: bottom;
+}
+
+/* Capas base */
+.work {
+  position: absolute;
+  inset: 4px;
+  border-radius: 20px;
+  transition: 0.3s ease;
+  transform-origin: bottom;
+}
+
+/* TAPA TRASERA */
+.work-5 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #0C79BC;
+  border-radius: 0px 20px 20px 20px;
+}
+
+/* pestaña izquierda */
+.work-5::after {
+  content: "";
+  position: absolute;
+  bottom: 99%;
+  left: 0;
+  width: 80px;
+  height: 16px;
+  background: #0C79BC;
+  border-radius: 16px 16px 0 0;
+}
+
+/* triangulito */
+.work-5::before {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: 75px;
+  width: 16px;
+  height: 16px;
+  background: #0C79BC;
+  clip-path: polygon(0 35%, 0% 100%, 50% 100%);
+}
+
+/* capas intermedias */
+.work-4 { background: #a1a1aa; }
+.work-3 { background: #d4d4d8; }
+.work-2 { background: #e4e4e7; }
+
+/* CARPETA PRINCIPAL */
+.work-1 {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 156px;
+  background: linear-gradient(to top, #4ca2c7, #59C3EF);
+  border-radius: 20px 0px 20px 20px;
+  display: flex;
+  align-items: flex-end;
+}
+
+/* pestaña derecha */
+.work-1::after {
+  content: "";
+  position: absolute;
+  bottom: 99%;
+  right: 0;
+  width: 146px;
+  height: 16px;
+  background: #59C3EF;
+  border-radius: 16px 16px 0 0;
+}
+
+/* triangulito derecho */
+.work-1::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  right: 142px;
+  width: 12px;
+  height: 12px;
+  background: #59C3EF;
+  clip-path: polygon(100% 14%, 50% 100%, 100% 100%);
+}
+
+/* ===== HOVER 3D ===== */
+
+.file:hover .work-4 {
+  transform: rotateX(-20deg);
+}
+
+.file:hover .work-3 {
+  transform: rotateX(-30deg);
+}
+
+.file:hover .work-2 {
+  transform: rotateX(-38deg);
+}
+
+.file:hover .work-1 {
+  transform: rotateX(-46deg) translateY(1px);
+  box-shadow:
+    inset 0 20px 40px #59C3EF,
+    inset 0 -20px 40px #0C79BC;
+}
+
+/* Sombra general */
+.file:hover .work-5 {
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.file {
+  transform: scale(0.50);
+}

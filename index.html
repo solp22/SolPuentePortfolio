@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sol Puente</title>
+    <link rel="stylesheet" href="estilos.css" />
+    <link rel="stylesheet" href="carpeta.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+  </head>
+  <body>
+    <!-- NAV -->
+    <header>
+      <nav class="mobile-menu">
+        <a href="#inicio">Inicio</a>
+        <a href="#trabajosCelu" data-trabajo="0">Diseño Web</a>
+        <a href="#trabajosCelu" data-trabajo="1">Motion Graphics</a>
+        <a href="#trabajosCelu" data-trabajo="2">Animación</a>
+        <a href="#trabajosCelu" data-trabajo="3">Otros</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <nav>
+        <a href="#inicio"
+          ><img id="sol" src="img/sol.png" alt="icono de un sol"
+        /></a>
+        <a href="#inicio">Inicio</a>
+        <a href="#trabajos" data-trabajo="0">Diseño Web</a>
+        <a href="#trabajos" data-trabajo="1">Motion Graphics</a>
+        <a href="#trabajos" data-trabajo="2">Animación</a>
+        <a href="#trabajos" data-trabajo="3">Otros</a>
+        <a href="#contacto">Contacto</a>
+
+        <button id="hamburguesa" class="hamburger" aria-label="Abrir menú">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <div id="der">
+          <img src="img/wifi.png" alt="icono de wifi" id="wifi" />
+          <img src="img/search.png" alt="icono de lupa" />
+          <img src="img/control.png" alt="icono de ajustes" />
+          <div id="fecha"></div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- INICIO -->
+    <section class="desktop" id="inicio">
+      <div class="center-wrapper">
+        <img 
+          src="img/solpuente.png"
+          class="center-image"
+          alt="una carpeta que dentro dice sol puente"
+        />
+
+        <div class="icon-wrap i7" >
+          <img src="img/processing.png" class="icon" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0" alt="imagen generada con processing"/>
+          <span class="icon-label">processing.jpg</span>
+        </div>
+        <div class="icon-wrap i2">
+          <img src="img/afiche.png" class="icon" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100" alt="afiche de un festival"/>
+          <span class="icon-label">afiche.jpg</span>
+        </div>
+
+        <div class="icon-wrap i3">
+          <img src="img/softcore.png" class="icon"  data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" alt="dibujo de una animacion"/>
+          <span class="icon-label">softcore.jpg</span>
+        </div>
+
+        <div class="icon-wrap i4">
+          <img src="img/torta.png" class="icon" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" alt="icono de una torta"/>
+          <span class="icon-label">torta.png</span>
+        </div>
+
+        <div class="icon-wrap i5">
+          <img src="img/ae.png" class="icon" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400" alt="logo de after effects"/>
+        </div>
+
+        <div class="icon-wrap i6">
+          <img src="img/fig.png" class="icon" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500" alt="logo de figma"/>
+        </div>
+
+        <div class="icon-wrap i1">
+          <img src="img/ps.png" class="icon" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600" alt="logo de Photoshop"/>
+        </div>
+
+        <div class="icon-wrap i8">
+          <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="700">
+            <div class="file">
+              <div class="work work-5"></div>
+              <div class="work work-4"></div>
+              <div class="work work-3"></div>
+              <div class="work work-2"></div>
+              <div class="work work-1"></div>
+            </div>
+          </div>
+          <span class="icon-label">Programación II</span>
+        </div>
+
+        <div class="icon-wrap i9" >
+          <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="800">
+            <div class="file">
+              <div class="work work-5"></div>
+              <div class="work work-4"></div>
+              <div class="work work-3"></div>
+              <div class="work work-2"></div>
+              <div class="work work-1"></div>
+            </div>
+          </div>
+          
+          <span class="icon-label">Diseño de Interfaces</span>
+        </div>
+
+        <div class="icon-wrap i10">
+          <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="900">
+            <div class="file">
+              <div class="work work-5"></div>
+              <div class="work work-4"></div>
+              <div class="work work-3"></div>
+              <div class="work work-2"></div>
+              <div class="work work-1"></div>
+            </div>
+          </div>
+          <span class="icon-label">Música y sonido</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOBRE MI -->
+    <section class="card">
+      <!-- SIDEBAR -->
+      <aside class="sidebar"  data-aos="fade-right" data-aos-duration="1000" data-aos-delay="400">
+        <div class="circulo" id="rojo"></div>
+        <div class="circulo" id="amarillo"></div>
+        <div class="circulo" id="verde"></div>
+        <div id="tools">
+          <p id="toolsTitulo">Herramientas</p>
+          <div class="tool">
+            <img src="img/psTools.png" alt="logo de Photoshop" />
+            <p class="labelTool">Photoshop</p>
+          </div>
+
+          <div class="tool">
+            <img src="img/aiTools.png" alt="logo de Illustrator" />
+            <p class="labelTool">Illustrator</p>
+          </div>
+
+          <div class="tool">
+            <img src="img/aeTools.png" alt="logo de after effects"/>
+            <p class="labelTool">After Effects</p>
+          </div>
+
+          <div class="tool">
+            <img src="img/figTools.png" alt="logo de figma"/>
+            <p class="labelTool">Figma</p>
+          </div>
+
+          <div class="tool">
+            <img src="img/htmlTools.png" alt="logo de html"/>
+            <p class="labelTool">HTML</p>
+          </div>
+
+          <div class="tool">
+            <img src="img/cssTools.png" alt="logo de css"/>
+            <p class="labelTool">CSS</p>
+          </div>
+
+          <div class="tool">
+            <img src="img/jsTools.png" alt="logo de javascript"/>
+            <p class="labelTool">Javascript</p>
+          </div>
+        </div>
+      </aside>
+
+      <!-- CONTENT -->
+      <section class="content" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200">
+        <div class="content-header">
+          <div id="flechas">
+            <img src="img/back.png" id="back" alt="icono de flecha para atras"/>
+            <img src="img/next.png" id="next" alt="icono de flecha para delante" />
+          </div>
+          <div id="sobremi">
+            <h2>Sobre mi</h2>
+          </div>
+          <div id="search">
+            <img src="img/search.png" alt="icono de lupa"/>
+          </div>
+        </div>
+        <div id="sobreinfo">
+          <img src="img/sobremi.jpg" class="profile" alt="foto de sol puente"/>
+
+          <p>
+            Mi nombre es Sol Puente, y soy una estudiante de Lic. en Diseño
+            Multimedia, apasionada por el diseño web y la animación audiovisual.
+            <br /><br />
+            Busco aprender y crecer constantemente al desarrollar y explorar
+            nuevas ideas que integren estética, movimiento e interactividad.
+          </p>
+        </div>
+      </section>
+    </section>
+
+    <!-- TRABAJOS COMPU -->
+    <section id="trabajos">
+      <div class="tabs-click">
+        <div data-index="0"></div>
+        <div data-index="1"></div>
+        <div data-index="2"></div>
+        <div data-index="3"></div>
+      </div>
+
+      <img src="img/AZUL carpetas.png" alt="carpeta titulada diseño web" />
+      <img src="img/ROJO carpetas.png" alt="carpeta titulada motion graphics" />
+      <img src="img/VIOLETA carpetas.png" alt="carpeta titulada animacion" />
+      <img src="img/VERDE carpetas.png" alt="carpeta titulada otros" />
+
+      <div class="secciones">
+        <div class="seccion" data-seccion="0">
+          <a href="ampliacion.html?id=0"
+            ><img src="img/schiaparelli.png" class="trabajo" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="100" alt="ecommerce para schiaparelli"
+          /></a>
+          <a href="ampliacion.html?id=1"
+            ><img src="img/taponto.png" class="trabajo" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="200" alt="rediseño de la app taponto"
+          /></a>
+          <a href="ampliacion.html?id=2"
+            ><img src="img/farmquip.png" class="trabajo" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="300" alt="ecommerce para farmquip"
+          /></a>
+          <a href="ampliacion.html?id=3"
+            ><img src="img/ong.png" class="trabajo" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="400" alt="app de donaciones"
+          /></a>
+        </div>
+        <div class="seccion" data-seccion="1">
+          <a href="ampliacion.html?id=4"
+            ><img src="img/carpetareel.png" class="trabajo" alt="showreel de mis trabajos del 2025"
+          /></a>
+          <a href="ampliacion.html?id=5"
+            ><img src="img/afterreel.png" class="trabajo" alt="showreel de trabajos en after effects"
+          /></a>
+        </div>
+
+        <div class="seccion" data-seccion="2">
+          <a href="ampliacion.html?id=6"
+            ><img src="img/softcoretrabajo.png" class="trabajo" alt="animacion para un videoclip musical"
+          /></a>
+          <a href="ampliacion.html?id=7"
+            ><img src="img/coralinetrabajo.png" class="trabajo" alt="animacion de coraline"
+          /></a>
+        </div>
+
+        <div class="seccion" data-seccion="3">
+          <a href="ampliacion.html?id=8"
+            ><img src="img/proyectora.png" class="trabajo" alt="branding para un festival"
+          /></a>
+          <a href="ampliacion.html?id=9"
+            ><img src="img/omnichord.png" class="trabajo" alt="omnichord hecho con makey makey"
+          /></a>
+        </div>
+      </div>
+    </section>
+
+    <section id="trabajosCelu">
+      <div class="tabs-click-celu">
+        <div data-index="0"></div>
+        <div data-index="1"></div>
+        <div data-index="2"></div>
+        <div data-index="3"></div>
+      </div>
+
+      <img src="img/AZUL carpeta cel.png" class="activa" alt="carpeta de diseño web"/>
+      <img src="img/ROJO carpeta cel.png" alt="carpeta de motion graphics"/>
+      <img src="img/VIOLETA carpeta cel.png" alt="carpeta de animacion"/>
+      <img src="img/VERDE carpeta cel.png" alt="carpeta de otros proyectos"/>
+
+      <div class="secciones">
+        <!-- SECCION 0 -->
+        <div class="seccion activa" data-seccion="0">
+          <div class="slider-container">
+            <div class="slider">
+              <div class="slide">
+                <a href="ampliacion.html?id=0">
+                  <img src="img/schiaparelli.png" class="trabajo" alt="ecommerce para schiaparelli"/>
+                </a>
+              </div>
+              <div class="slide">
+                <a href="ampliacion.html?id=1">
+                  <img src="img/taponto.png" class="trabajo" alt="rediseño de la app taponto"/>
+                </a>
+              </div>
+              <div class="slide">
+                <a href="ampliacion.html?id=2">
+                  <img src="img/farmquip.png" class="trabajo" alt="ecommerce para farmquip"/>
+                </a>
+              </div>
+              <div class="slide">
+                <a href="ampliacion.html?id=3">
+                  <img src="img/ong.png" class="trabajo" alt="app de donaciones" />
+                </a>
+              </div>
+            </div>
+            <span class="material-symbols-rounded anterior">chevron_left</span>
+            <span class="material-symbols-rounded siguiente"
+              >chevron_right</span
+            >
+              <div class="paginacion"></div>
+
+          </div>
+        </div>
+
+        <!-- SECCION 1 -->
+<div class="seccion" data-seccion="1">
+  <div class="slider-container">
+    <div class="slider">
+      <div class="slide">
+        <a href="ampliacion.html?id=4">
+          <img src="img/carpetareel.png" class="trabajo" alt="showreel de mis trabajos del 2025" />
+        </a>
+      </div>
+      <div class="slide">
+        <a href="ampliacion.html?id=5">
+          <img src="img/afterreel.png" class="trabajo" alt="showreel de trabajos en after effects" />
+        </a>
+      </div>
+    </div>
+
+    <span class="material-symbols-rounded anterior">chevron_left</span>
+    <span class="material-symbols-rounded siguiente">chevron_right</span>
+
+    <div class="paginacion"></div>
+  </div>
+</div>
+
+
+ <!-- SECCION 2 -->
+<div class="seccion" data-seccion="2">
+  <div class="slider-container">
+    <div class="slider">
+      <div class="slide">
+        <a href="ampliacion.html?id=6">
+          <img src="img/softcoretrabajo.png" class="trabajo" alt="animacion para un videoclip musical" />
+        </a>
+      </div>
+      <div class="slide">
+        <a href="ampliacion.html?id=7">
+          <img src="img/coralinetrabajo.png" class="trabajo"  alt="animacion de coraline"/>
+        </a>
+      </div>
+    </div>
+
+    <span class="material-symbols-rounded anterior">chevron_left</span>
+    <span class="material-symbols-rounded siguiente">chevron_right</span>
+
+    <div class="paginacion"></div>
+  </div>
+</div>
+
+
+        <!-- SECCION 3 -->
+<div class="seccion" data-seccion="3">
+  <div class="slider-container">
+    <div class="slider">
+      <div class="slide">
+        <a href="ampliacion.html?id=8">
+          <img src="img/proyectora.png" class="trabajo"  alt="branding para un festival"/>
+        </a>
+      </div>
+      <div class="slide">
+        <a href="ampliacion.html?id=9">
+          <img src="img/omnichord.png" class="trabajo" alt="omnichord hecho con makey makey"/>
+        </a>
+      </div>
+    </div>
+
+    <span class="material-symbols-rounded anterior">chevron_left</span>
+    <span class="material-symbols-rounded siguiente">chevron_right</span>
+
+    <div class="paginacion"></div>
+  </div>
+</div>
+
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto">
+      <h2 data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="100">Contacto</h2>
+
+      <div id="contactTop">
+        <a href="mailto:sol.puentereal@gmail.com" class="contactItem" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100">
+          <div class="teclaContacto">
+            <img src="img/mail.png" alt="icono de mail"/>
+          </div>
+          <p class="contactLabel">Mail</p>
+        </a>
+
+        <a href="https://www.linkedin.com/in/sol-puente/" class="contactItem" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="500">
+          <div class="teclaContacto">
+            <img src="img/linkedin.png" alt="icono de linkedin" />
+          </div>
+          <p class="contactLabel">LinkedIn</p>
+        </a>
+
+        <a href="https://www.instagram.com/solpuente_/" class="contactItem" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300">
+          <div class="teclaContacto">
+            <img src="img/ig.png" alt="icono de instagram" />
+          </div>
+          <p class="contactLabel">Instagram</p>
+        </a>
+      </div>
+
+      <div id="contactBot">
+        <a href="https://www.behance.net/solpuente" class="contactItem" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
+          <div class="teclaContacto">
+            <img src="img/behance.png" alt="icono de behance" />
+          </div>
+          <p class="contactLabel">Behance</p>
+        </a>
+
+        <div class="teclaContacto" id="phone" data-aos="zoom-out" data-aos-duration="1000" data-aos-delay="600">
+          <img src="img/phone.png" alt="icono de un telefono" />
+        </div>
+
+        <a href="https://github.com/solp22" class="contactItem" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="400">
+          <div class="teclaContacto">
+            <img src="img/github.png" alt="icono de github" />
+          </div>
+          <p class="contactLabel">GitHub</p>
+        </a>
+      </div>
+    </section>
+
+    <script src="js/home.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+      disable: () => window.innerWidth < 768,
+      once: true
+    });
+    </script>
+  </body>
+</html>

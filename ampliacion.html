@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sol Puente</title>
+    <link rel="stylesheet" href="estilos.css" />
+    <link rel="stylesheet" href="ampliacion.css" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+  </head>
+  <body>
+    <!-- NAV -->
+    <header>
+      <nav class="mobile-menu">
+        <a href="index.html#inicio">Inicio</a>
+        <a href="index.html#trabajosCelu" data-trabajo="0">Diseño Web</a>
+        <a href="index.html#trabajosCelu" data-trabajo="1">Motion Graphics</a>
+        <a href="index.html#trabajosCelu" data-trabajo="2">Animación</a>
+        <a href="index.html#trabajosCelu" data-trabajo="3">Otros</a>
+        <a href="index.html#contacto">Contacto</a>
+      </nav>
+      <nav>
+        <a href="index.html#inicio"
+          ><img id="sol" src="img/sol.png" alt="icono de un sol"
+        /></a>
+        <a href="index.html#inicio">Inicio</a>
+        <a href="index.html#trabajos" data-trabajo="0">Diseño Web</a>
+        <a href="index.html#trabajos" data-trabajo="1">Motion Graphics</a>
+        <a href="index.html#trabajos" data-trabajo="2">Animación</a>
+        <a href="index.html#trabajos" data-trabajo="3">Otros</a>
+        <a href="index.html#contacto">Contacto</a>
+
+        <button id="hamburguesa" class="hamburger" aria-label="Abrir menú">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <div id="der">
+          <img src="img/wifi.png" alt="icono de wifi" id="wifi" />
+          <img src="img/search.png" alt="icono de lupa" />
+          <img src="img/control.png" alt="icono de ajustes" />
+          <div id="fecha"></div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- CONTENIDO -->
+     
+    <div id="background">
+      <section class="hero">
+        <div class="hero-image">
+          <img id="hero-img" src="img/select.png" alt="fondo para el titulo" />
+          <h1 id="titulo"></h1>
+        </div>
+        <div class="tabs-wrapper">
+          <div class="tabs" id="tecnologias"></div>
+        </div>
+      </section>
+      <div id="texto"></div>
+    </div>
+
+    <!-- VIDEO -->
+
+    <section id="video">
+      <video controls>
+        <source src="" type="video/mp4" />
+      </video>
+    </section>
+
+    <script src="js/home.js"></script>
+    <script src="js/ampliacion.js"></script>
+  </body>
+</html>

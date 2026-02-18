@@ -1,0 +1,953 @@
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("./fonts/SFProDisplay-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("./fonts/SFProDisplay-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("./fonts/SFProDisplay-Semibold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("./fonts/SFProDisplay-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("./fonts/SFProDisplay-Heavy.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family:
+    "SF Pro Display",
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#sol,
+#der img {
+  width: 1.5em;
+}
+
+#hamburguesa {
+  width: 1.8em;
+}
+
+
+nav {
+  display: flex;
+  align-items: center;
+  background-color: #e6e6e6;
+  padding: 0.4em 0.6em;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000; 
+}
+
+
+#der {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.center-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20em;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* ----- ICONOS ------- */
+
+.icon {
+  width: 5em;
+  will-change: transform;
+}
+
+.icon-wrap {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4em;
+  z-index: 2;
+}
+
+.center-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 25em;
+  height: 20em;
+}
+
+.icon-label {
+  font-size: 0.75em;
+  margin-top: 0.3em; 
+  color: #000;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  background: #f2f2f2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5em;
+  clip-path: circle(0% at 5% 5%);
+  transition: clip-path 0.6s ease-in-out;
+  z-index: 999;
+}
+
+body.menu-open .mobile-menu {
+   clip-path: circle(150% at 5% 5%);
+}
+
+.mobile-menu a {
+  color: black;
+  font-size: 2em;
+  font-weight: 600;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 0.4s ease;
+  display: block;
+}
+
+body.menu-open .mobile-menu a {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* BOTÓN */
+.hamburger {
+  width: 30px;
+  height: 22px;
+  position: relative;
+  border: none;
+  background: none;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+/* LÍNEAS */
+.hamburger span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: black;
+  border-radius: 3px;
+  transition: 0.4s ease;
+}
+
+/* posiciones iniciales */
+.hamburger span:nth-child(1) {
+  top: 0;
+}
+.hamburger span:nth-child(2) {
+  top: 9px;
+}
+.hamburger span:nth-child(3) {
+  top: 18px;
+}
+
+/* ===== ANIMACIÓN ===== */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg);
+  top: 9px;
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg);
+  top: 9px;
+}
+
+
+/* CARD */
+.card {
+  margin: 10em auto;
+  width: 90%;
+  max-width: 25em;
+  background: white;
+  border-radius: 20px;
+  display: flex;
+  overflow: hidden;
+  background-color: #FBFBFB;
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 5em;
+  background: #ededed;
+  padding: 1em 0;
+  text-align: center;
+}
+
+#tools{
+   display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.7em;
+  margin-top: 2em;
+}
+
+.sidebar img {
+  width: 2.2em;
+}
+
+/* CONTENT */
+.content {
+  padding: 0em 1.5em 1.5em;
+  text-align: center;
+  flex: 1;
+}
+
+.content-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 1em;
+  background-color: #F6F6F6;
+  padding: 0.7em;
+  margin-left: -1.5em;
+  margin-right: -1.5em;
+}
+
+.content-header h2{
+  font-weight: 600;
+  text-align: center;
+}
+
+.profile {
+  width: 70%;
+  border-radius: 20px;
+  margin: 1em auto;
+}
+
+p {
+  font-size: 0.9em;
+  line-height: 1.6;
+}
+
+.desktop {
+  min-height: 90vh;
+  position: relative;
+}
+
+.content-header img{
+  width: 1em;
+}
+
+#next{
+  transform: rotate(180deg);
+  margin-left: 0.3em;
+}
+
+#sobremi{
+  display: flex;
+  width: 80%;
+  justify-content: center;
+}
+
+.circulo {
+  width: 0.7em;
+  height: 0.7em;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+#rojo{
+  background-color: #FF8A4B;
+  transition: 0.2s;
+}
+
+#amarillo{
+  background-color: #FED02D;
+  margin: 0em 0.3em ;
+    transition: 0.2s;
+
+}
+
+#verde{
+  background-color: #5CE7BD;
+    transition: 0.2s;
+
+}
+
+
+.teclaContacto {
+  width: 8em;
+  height: 8em;
+  margin: 0em 1em;
+  background-color: #6F6983;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s;
+}
+
+.teclaContacto:hover{
+  background-color: #504c5f;
+}
+
+#phone{
+  background-color: #78D869;}
+
+#phone:hover{
+ background-color: #65b259;
+ cursor: pointer;
+}
+
+#contacto{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#contacto h2{
+  color: white;
+  font-size: 3em;
+  margin-bottom: 0.5em;
+  font-weight: 500;
+}
+
+#contactTop, #contactBot{
+  display: flex;
+  margin-top: 1em;
+}
+
+#contacto{
+  background-color: #5C566E;
+  height: 100vh;
+  width: 100%;
+}
+
+.contactItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+}
+
+.contactLabel {
+  margin-top: 0.6em;
+  font-size: 1.3em;
+  color: white;
+  font-weight: 400;
+  text-align: center;
+}
+
+.teclaContacto img{
+  width: 3em;
+}
+
+.teclaContacto {
+  width: 6em;
+  height: 6em;
+}
+
+
+/* ---- CELU ----- */
+@media (max-width: 767px) {
+
+
+  nav a,
+  #der img:not(#wifi) {
+    display: none;
+  }
+
+  #contactTop,
+  #contactBot {
+    gap: 1em;
+  }
+
+  .teclaContacto {
+    width: 5em;
+    height: 5em;
+    margin: 0; 
+  }
+
+  .teclaContacto img {
+    width: 2.5em;
+  }
+
+  .contactLabel {
+    font-size: 1em;
+  }
+
+  .i1 {
+    top: -5em;
+    left: 3em;
+  }
+  .i2 {
+    top: 21em;
+    left: 1em;
+  }
+
+  .i3 {
+    top: 1em;
+    left: 18em;
+    right: auto;
+  }
+
+  .i4 {
+    top: -9em;
+    left: 15em;
+    right: auto;
+  }
+
+  .i5 {
+    top: 20em;
+    left: 10em;
+    bottom: auto;
+    right: auto;
+  }
+
+  .i6 {
+    top: 14em;
+    left: 0;
+    bottom: auto;
+  }
+
+  .i7 {
+    top: 26em;
+    left: 17em;
+    bottom: auto;
+  }
+
+  .i8 {
+    top: 19em;
+    left: 19em;
+  }
+
+  .i9 {
+    top: 2em;
+    right: auto;
+    left: 0;
+  }
+
+  .i10 {
+    display: none;
+  }
+
+  .icon-wrap,
+  .icon {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+  }
+
+  .labelTool, #tools p{
+    display: none;
+  }
+
+  #trabajos{
+    display: none;
+  }
+
+  #trabajosCelu > img{
+    width: 100%;
+    position: absolute;
+    cursor: pointer;
+    z-index: 1;
+    transition: filter 0.3s ease, transform 0.3s ease;
+  }
+
+  #trabajosCelu{
+    position: relative;
+    height: 80vh;
+    overflow: hidden;
+  }
+
+.tabs-click-celu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  z-index: 50;
+}
+
+.tabs-click-celu div {
+  cursor: pointer;
+ 
+}
+
+#trabajosCelu img.activa {
+  z-index: 10;
+}
+
+.secciones {
+  position: relative;
+  z-index: 20;
+}
+.seccion {
+  position: relative;
+  z-index: 20;
+}
+
+.seccion img{
+  width: 50%;
+}
+
+#trabajosCelu .secciones {
+  position: absolute;
+  inset: 0;
+  z-index: 20;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#trabajosCelu .seccion {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.4s ease;
+}
+
+#trabajosCelu .seccion.activa {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.slider-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* ESTO ES CLAVE */
+}
+
+.slider {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease;
+}
+
+.slide {
+  min-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.siguiente,
+.anterior {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #ffffff;
+  cursor: pointer;
+  z-index: 50;
+}
+
+.siguiente {
+  right: -17px;
+}
+
+.anterior {
+  left: -17px;
+}
+
+.slide a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.slide img {
+  width: 80%;
+  max-width: 400px;
+  display: block;
+}
+.material-symbols-rounded {
+  font-size: 70px !important; 
+}
+
+.paginacion {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.punto {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.5);
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.punto.activo {
+  background: #ffffff;
+  transform: scale(1.2);
+}
+
+
+
+
+}
+
+/* ------ DESKTOP ------ */
+@media (min-width: 768px) {
+  #hamburguesa {
+    display: none;
+  }
+
+  nav a {
+    display: block;
+    font-weight: 500;
+    text-decoration: none;
+    color: black;
+    padding: 0.4em;
+    border-radius: 5px;
+    transition: 0.3s;
+  }
+
+  nav a:not(:has(#sol)):hover {
+    background-color: #0000001e;
+  }
+
+  #der {
+    margin-right: 0.5em;
+  }
+
+  nav {
+    flex-wrap: nowrap;
+    gap: 0.3em;
+    padding: 0.2em 0.7em;
+    position: relative;
+    z-index: 10;
+  }
+
+  /* posiciones */
+  .i1 {
+    top: -8.5em;
+    left: -28em;
+  }
+  .i2 {
+    top: -11em;
+    left: -2em;
+  }
+  .i3 {
+    top: -7em;
+    right: -13em;
+  }
+  .i4 {
+    top: 2.5em;
+    right: -20em;
+  }
+  .i5 {
+    bottom: -9em;
+    right: -9em;
+  }
+  .i6 {
+    bottom: -11.5em;
+    left: -3em;
+  }
+  .i7 {
+    bottom: -7em;
+    left: -23em;
+  }
+  .i8 {
+    top: 4em;
+    left: -17em;
+  }
+  .i9 {
+    top: 16em;
+    right: -23em;
+  }
+  .i10 {
+    top: -13em;
+    right: 5em;
+  }
+
+  .icon {
+    width: 7.5em;
+  }
+
+  .center-image {
+    width: 25em;
+  }
+
+  .card{
+    max-width: 75em;
+    height: 40em;
+  }
+
+  .profile{
+    width: 15em;
+  }
+
+  .sidebar{
+    width: 15em;
+    text-align: left;
+    padding-left:2em ;
+  }
+
+  .content-header{
+    height: 4em;
+  }
+  #tools{
+    align-items: flex-start;
+  }
+
+  .circulo{
+    width: 1.3em;
+    height: 1.3em;
+    margin-top: 0.5em;
+  }
+
+  #amarillo{
+    margin: 0em 0.7em;
+  }
+
+  #rojo:hover{
+    background-color: #e36e2e;
+    cursor: pointer;
+  }
+
+  #amarillo:hover{
+    background-color: #edbf18;
+    cursor: pointer;
+  }
+
+  #verde:hover{
+    background-color: #32d1a1;
+    cursor: pointer;
+  }
+
+  #tools img{
+    width: 2em;
+  }
+
+  #toolsTitulo{
+    color: #BCBABA;
+    font-weight: 600;
+      font-size: 16px;
+  }
+
+  .tool {
+  display: flex;
+  align-items: center;
+  gap: 0.3em; 
+   padding: 0.3em;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.labelTool {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+#flechas img{
+  width: 1.3em;
+}
+
+#back{
+  margin: 0em 0.5em;
+}
+
+#sobremi{
+  justify-content: flex-start;
+  margin-left: 2em;
+  font-size: 1.2em;
+}
+
+#search img{
+  width: 1.5em;
+}
+
+#search{
+  display: flex;
+  align-items: flex-end;
+  margin-right: 1em;
+}
+
+.content-header{
+  justify-content: space-between;
+}
+
+#sobreinfo{
+  display: flex;
+  padding:3em;
+  align-items: center;
+}
+
+#sobreinfo p{
+  padding: 2em;
+  text-align: left;
+  font-size: 1.2em;
+}
+
+.profile{
+  width: 17em;
+}
+
+.tool:hover{
+  background-color: #0000001e;
+  cursor: pointer;
+}
+
+.teclaContacto img{
+  width: 4em;
+}
+
+.teclaContacto {
+  width: 8em;
+  height: 8em;
+}
+
+#contacto h2{
+  font-size: 3.5em;
+}
+
+#trabajos > img{
+  width: 100%;
+  position: absolute;
+  cursor: pointer;
+  z-index: 1;
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+#trabajos{
+  position: relative;
+  height: 80vh;
+  overflow: hidden;
+}
+
+.tabs-click {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); 
+  z-index: 20;
+}
+
+.tabs-click div {
+  cursor: pointer;
+ 
+}
+
+#trabajos img.activa {
+  z-index: 10;
+}
+
+.secciones {
+  position: relative;
+  margin-top: 2rem;
+}
+
+.seccion {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0;
+  transform: scale(0.95);
+  pointer-events: none;
+  transition: 0.4s ease;
+}
+
+.seccion.activa {
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: auto;
+}
+
+
+.trabajo {
+  width: 20em;
+  position: relative;
+  z-index: 40;
+  margin: 0em 0.7em;
+   transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+}
+
+.trabajo:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.18);
+  cursor: pointer;
+}
+
+.secciones {
+  position: absolute;
+  inset: 0;
+  z-index: 30; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#trabajosCelu{
+  display: none;
+}
+
+
+}
