@@ -156,6 +156,10 @@ body.menu-open .mobile-menu a {
   transform: translateY(0);
 }
 
+.carpeta-mobile {
+  display: none;
+}
+
 /* BOTÓN */
 .hamburger {
   width: 30px;
@@ -419,6 +423,15 @@ p {
     font-size: 1em;
   }
 
+   .carpeta-desktop {
+    display: none;
+  }
+
+  .carpeta-mobile {
+    display: block;
+    width: 80px; 
+  }
+
   .i1 {
     top: -5em;
     left: 3em;
@@ -567,7 +580,7 @@ p {
   position: relative;
   width: 100%;
   height: 100%;
-  overflow: hidden; /* ESTO ES CLAVE */
+  overflow: hidden; 
 }
 
 .slider {
