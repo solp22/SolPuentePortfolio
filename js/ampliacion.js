@@ -2,7 +2,7 @@ const trabajos = [
   {
     titulo: "Schiaparelli E-commerce",
     background: "img/backgorundSchiaparelli.jpg",
-    video: "img/ampliacionSchiaparelli.mov",
+    video: "https://www.youtube.com/embed/M8i1VEuVG48?si=CERh6kB2g1ID29L6",
     tecnologias: ["HTML", "CSS", "Javascript", "MongoDB"],
     descripcion: [
   { tipo: "p", contenido: "El proyecto consiste en el desarrollo de una aplicación web full stack, que integra tanto el frontend como el backend." },
@@ -21,7 +21,7 @@ const trabajos = [
   {
     titulo: "Rediseño Taponto",
     background: "img/ampliacionTaponto.jpg",
-    video: "img/tapontoShowcase.mp4",
+    video: "https://www.youtube.com/embed/2Agbf3EbnVU?si=giSb33G57dxmDPPs",
     tecnologias: ["UX/UI", "Figma", "Realizado con Lara Rodríguez"],
     descripcion: [
   { tipo: "p", contenido: "Taponto es una aplicación pensada para ayudar a las personas a encontrar a sus mascotas perdidas, publicar animales encontrados y conectar a quienes buscan adoptar de forma responsable." },
@@ -37,7 +37,7 @@ const trabajos = [
   {
     titulo: "Farmquip E-commerce",
     background: "img/ampliacionFarmquip.jpg",
-    video: "img/farmquipShowcase.mp4",
+    video: "https://www.youtube.com/embed/CCfUki2XGxc?si=aZgYX2G73dbSM-YP",
     tecnologias: ["UX/UI", "Figma"],
     descripcion: [
   { tipo: "p", contenido: "Este proyecto propone el rediseño de la interfaz web de Farmquip, una empresa dedicada a la venta de equipamiento para el manejo de ganado." },
@@ -51,7 +51,7 @@ const trabajos = [
 {
     titulo: "Aplicación de donaciones",
     background: "img/ampliacionOng.jpg",
-    video: "img/ongShowcase.mp4",
+    video: "https://www.youtube.com/embed/LO22253SPC0?si=N9BUBWU-Kcin_Ocx",
     tecnologias: ["UX/UI", "Figma"],
     descripcion: [
   { tipo: "p", contenido: "Este proyecto consiste en el desarrollo de una aplicación para la ONG Por los Niños Uruguayos, pensada para facilitar y organizar la gestión de donaciones de manera simple y accesible. La app permite a los usuarios registrar rápidamente los objetos que desean donar, indicando el tipo, estado, cantidad y disponibilidad de entrega." },
@@ -67,7 +67,7 @@ const trabajos = [
     {
     titulo: "Showreel 2025",
     background: "img/ampliacionCarpeta.jpg",
-    video: "img/showreel2025.mp4",
+    video: "https://www.youtube.com/embed/xHr_wN-8Jj0?si=W2HSIBkuSRTB7xiG",
     tecnologias: ["After Effects", "Illustrator", "Photoshop"],
     descripcion: [
   { tipo: "p", contenido: "Este proyecto consiste en un reel que recopila todos los trabajos realizados a lo largo de mi carrera de Diseño Multimedia hasta 2025. Funciona como una síntesis visual de mi recorrido, mostrando la evolución de mis ideas, mi estilo y las distintas áreas que fui explorando." },
@@ -84,7 +84,7 @@ const trabajos = [
     {
     titulo: "After Effects Showreel",
     background: "img/ampliacionAfter.jpg",
-    video: "img/afterShowreel.mp4",
+    video: "https://www.youtube.com/embed/8EA6ICKbHoM?si=Kf-djiOB1gtFDQWV",
     tecnologias: ["After Effects"],
     descripcion: [
   { tipo: "p", contenido: "Este reel recopila los trabajos realizados para la materia Diseño Digital 6, una asignatura enfocada en el aprendizaje y dominio de la herramienta After Effects. A lo largo del curso trabajamos distintos aspectos de la animación y el motion graphics, hasta técnicas más avanzadas como trackeo de cámara y uso de capas 3D." },
@@ -99,7 +99,7 @@ const trabajos = [
     {
     titulo: "Videoclip Musical",
     background: "img/ampliacionSoftcore.jpg",
-    video: "img/softcoreAnimacion.mp4",
+    video: "https://www.youtube.com/embed/ZjkD1nqjfpA?si=LzoO7k7fzv2Yd-I2",
     tecnologias: ["After Effects", "Photoshop"],
     descripcion: [
   { tipo: "p", contenido: "Este proyecto consiste en la realización de un video musical animado para la canción “Softcore” de The Neighbourhood. La propuesta toma como punto de partida el género pop alternativo que caracteriza a la banda, un estilo que suele abordar temáticas vinculadas a la juventud, la rebeldía, la autoexploración y el consumo de drogas." },
@@ -115,7 +115,7 @@ const trabajos = [
     {
     titulo: "Animación Coraline",
     background: "img/ampliacionCoraline.jpg",
-    video: "img/coralineAnimacion.mp4",
+    video: "https://www.youtube.com/embed/f2N_3zsXK9w?si=mjflDY45PQyevK86",
     tecnologias: ["After Effects", "Photoshop"],
     descripcion: [
   { tipo: "p", contenido: "Este proyecto consiste en una animación corta inspirada en la película Coraline. La historia sigue a una niña curiosa que se muda a una nueva casa junto a sus padres, quienes están constantemente ocupados y apenas le prestan atención. Coraline descubre una puerta secreta que la conduce a un mundo paralelo, donde existe una versión alternativa de su vida con unos “otros” padres que la consienten y cumplen todos sus deseos." },
@@ -132,7 +132,7 @@ const trabajos = [
     {
     titulo: "Branding para festival",
     background: "img/ampliacionProyectora.jpg",
-    video: "img/ampliacionProyectora.mov",
+    video: "https://www.youtube.com/embed/xWs29t3Hffw?si=34b5E_xpS3B6l9rq",
     tecnologias: ["Photoshop", "Illustrator", "Figma"],
    descripcion: [
   { tipo: "p", contenido: "Este proyecto se basa en la creación integral de la identidad de marca para un festival, abarcando todos sus elementos comunicacionales: nombre, logotipo, sistema cromático y tipográfico, así como aplicaciones en afiches, pulseras, Instagram y página web." },
@@ -149,7 +149,7 @@ const trabajos = [
     {
     titulo: "Omnichord con Makey Makey",
     background: "img/ampliacionOmnichord.jpg",
-    video: "img/omnichord.mp4",
+    video: "https://www.youtube.com/embed/x08ZVbnvinA?si=AYIQdeFJq3ABcrfu",
     tecnologias: ["Makey Makey", "Omnichord Online", "Realizado con Joaquina García"],
     descripcion: [
   { tipo: "p", contenido: "Este proyecto consiste en una instalación audiovisual interactiva en la que se utilizó un Makey Makey para recrear el funcionamiento de un Omnichord, un instrumento electrónico que genera acordes y sonidos de manera simple e intuitiva." },
@@ -172,7 +172,7 @@ const trabajo = trabajos[id];
 
 document.getElementById("titulo").textContent = trabajo.titulo;
 document.getElementById("background").style.backgroundImage = `url(${trabajo.background})`;
-document.querySelector("video").src = trabajo.video;
+document.querySelector("iframe").src = trabajo.video;
 
 //texto
 const textoContainer = document.getElementById("texto");
